@@ -84,5 +84,31 @@ span.price {
   color: grey;
 }
 
+.accordion{
+  --bs-accordion-btn-bg: #ffc0d3;
+  --bs-accordion-active-bg: #ff5c8d;
+  --bs-accordion-active-color: #ffffff;
+  --bs-accordion-btn-focus-box-shadow:none;
+  
+}
+
+.carousel-indicators .active {
+  background-color: #f00;
+}
 
 
+.carousel-control-prev-icon {
+
+background-image: url"data:image/svg+xml;charset=utf8,%3Csvg xmIns='http://www.w3.org/20
+
+00/svg' fill='%23fff viewBox='0 0 8 8'%3%3Cpath d='M5.25 01-4 4 4 4 1.5-1.5-2.5-2.5 2.5-
+
+2.5-1.5-1.52'/%3E%3C/svg%3E"} limportant;}
+
+.carousel-control-next-icon {
+
+background-image: url"data:image/svg +xml;charset=utf8,%3Csvg xmIns='http://www.w3.org/2
+
+000/svg' fill='%23ff5c8d viewBox='0 0 8 8'%3%3Cpath d='M2.75 01-1.5 1.5 2.5 2.5-2.5 2.5 1.5
+
+1.5 4-4-4-42/%3Е%3C/svg%3E" limportant;}

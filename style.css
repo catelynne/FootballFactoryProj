@@ -63,6 +63,11 @@ label {
   font-size: 24px;
 }
 
+.bag-icon{
+  color:#ff0f3f;
+}
+
+
 .btn {
   background-color: palevioletred;
   color: white;
@@ -112,3 +117,4 @@ background-image: url"data:image/svg +xml;charset=utf8,%3Csvg xmIns='http://www.
 000/svg' fill='%23ff5c8d viewBox='0 0 8 8'%3%3Cpath d='M2.75 01-1.5 1.5 2.5 2.5-2.5 2.5 1.5
 
 1.5 4-4-4-42/%3Е%3C/svg%3E" limportant;}
+

@@ -4,10 +4,10 @@
     font-style: normal;
   }
   
- .marquee {
-  background-color: palevioletred;
-  font-size: larger;
- }
+  .bi-bag-heart{
+    color:#d42f2f;
+  }
+
  .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -40,7 +40,7 @@
 .container {
   background-color: #f2f2f2;
   padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
+  border: 1px solid rgb(39, 39, 39);
   border-radius: 3px;
 }
 
@@ -48,7 +48,7 @@ input[type=text] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
-  border: 1px solid#ccc;
+  border: 1px solid#cccccc;
   border-radius: 3px;
 }
 
@@ -63,9 +63,7 @@ label {
   font-size: 24px;
 }
 
-.bag-icon{
-  color:#ff0f3f;
-}
+
 
 
 .btn {

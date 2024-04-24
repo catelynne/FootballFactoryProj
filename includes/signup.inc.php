@@ -1,22 +1,37 @@
-<?php
- require "header.php";
-?>
+<?php 
+if (isset($_POST['signup-submit'])) {
 
-    <main> 
-        <div class="wrapper-main">
-            <section class="section-default">
-          <h1>Signup</h1>
-          <form action="includes/signup.inc.php" method="post">
-            <input type="text" name="uid" placeholder="Username">
-            <input type="text" name="mail" placeholder="E-mail">
-            <input type="password" name="pwd" placeholder="Password">
-            <input type="password" name="pwd-repeat" placeholder="Repeat password">
-            <button type="submit" name="signup-submit">Signup</button>
-          </form>
-        </div>
-    </main>
+  require 'dbh.inc.php';
 
+  $username = $_POST['uid'];
+  $email = $_POST['mail'];
+  $password = $_POST['pwd'];
+  $passwordRepeat = $_POST['pwd-repeat'];
 
-<?php
- require "footer.php";
-?>
+  if (empty($username) || empty($email) || empty($password) || empty($passwordRepeat)) {
+    header("Location: ../signup.php?error=emptyfields&uid=".$username."&email=".$email);
+    exit();
+  }
+  else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9*$/]", $username)) {
+    header("Location: ../signup.php?error=invalidmailuid=");
+    exit();
+  }
+  else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    header("Location: ../signup.php?error=invalidmail&uid=".$username.);
+    exit();
+  }
+  else if (!preg_match("/^[a-zA-Z0-9*$/]", $username)) {
+    header("Location: ../signup.php?error=invaliduid&mail=".$email);
+    exit();
+  }
+  else if ($password !== $passwordRepeat) {
+    header("Location: ../signup.php?error=passwordCheck&mail=".$username."&email=".$email);
+    exit();
+  }
+  else {
+
+    $sql = "SELECT uidUsers FROM users WHERE uidUsers=?";
+    $stmt = mysqli_stmt_init($conn);
+  }
+
+}

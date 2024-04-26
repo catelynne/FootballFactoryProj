@@ -17,5 +17,5 @@
 </main>  
 
 <?php
- require "fotter.php";
+ require "footer.php";
 ?>
